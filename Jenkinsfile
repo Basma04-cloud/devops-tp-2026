@@ -20,6 +20,14 @@ pipeline {
                 bat 'mvn clean compile'
             }
         }
+        stage('Analyse SonarQube') {
+    steps {
+        echo 'Analyse de la qualité du code...'
+        withSonarQubeEnv('SonarQube') {
+            bat 'mvn sonar:sonar'
+        }
+    }
+}
         
         stage('Tests Unitaires') {
             steps {
