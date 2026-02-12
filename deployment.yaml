@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: devops-app
-        image: votre-username/devops-app:1.0
+        image: basma04/devops-app:1.0
         ports:
         - containerPort: 8080
