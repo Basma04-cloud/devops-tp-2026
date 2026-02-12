@@ -1,6 +1,6 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:17.0.8-jdk-slim
 WORKDIR /app
 COPY target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
-
+ 
